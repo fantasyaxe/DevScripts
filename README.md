@@ -26,6 +26,34 @@
     </b>
 </p>
 
+<H2 align="center">-==[ File Structure ]==-</H2>
+
+```
+root/
+├── jars/
+│   ├── client/
+│   │   └── client.jar
+│   │   └── mappings/
+│   │       └── joined.srg
+│   ├── server/
+│   │   ├── server.jar
+│   │   └── mappings/
+│   │       └── joined.srg
+│   ├── SpecialSource.jar
+│   └── CFR.jar
+├── patches/
+│   ├── client/... (Patches there...)
+│   ├── server/... (Patches there...)
+│   ├── apply_patches.sh
+│   └── generate_patches.sh
+├── sources/
+│   ├── client/... (Source there...)
+│   └── server/... (Source there...)
+├── init.sh
+├── decompile.sh
+└── deobf.sh
+```
+
 <H1 align="center">-==[ Socials ]==-</H1>
 
 <p align="center">
