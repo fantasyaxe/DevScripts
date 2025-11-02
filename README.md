@@ -10,6 +10,22 @@
     </b>
 </p>
 
+<H2 align="center">-==[ How to ]==-</H2>
+
+<p align="center" style="font-size: 15px">
+    <b>
+      1 - Поместить в папку jars:
+      <br> client.jar и/или server.jar (В соответствующие папки)
+      <br> 
+        <a href="https://www.benf.org/other/cfr/" targer="_blank">CFR.jar</a> 
+        и 
+        <a href="https://github.com/Re-Minecraft/SpecialSource" targer="_blank">SpecialSource.jar</a>
+      <br> 2 - Вытащить (Например из MCP751) маппинги 
+      <br> и закинуть их в mappings (Прям всё, что лежало в папке с маппингами)
+      <br> 3 - Запустить init.sh (.bat нет. Качайте git на винду)
+    </b>
+</p>
+
 <H1 align="center">-==[ Socials ]==-</H1>
 
 <p align="center">
