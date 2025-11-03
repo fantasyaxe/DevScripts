@@ -7,7 +7,8 @@ fi
 
 path=$1
 mkdir -p "deobfuscated"
-java -jar ./jars/SpecialSource.jar --in-jar ./jars/${path}/${path}.jar --out-jar "./deobfuscated/${path}.jar" --srg-in ${path}/mappings/joined.srg
+java -jar ./jars/SpecialSource.jar --in-jar ./jars/${path}/${path}.jar --out-jar "./deobfuscated/${path}.jar" --srg-in ./jars/${path}/mappings/packaged.srg
+#java -jar ./jars/SpecialSource.jar --in-jar ./deobfuscated/pre-${path}.jar --out-jar "./deobfuscated/${path}.jar" --srg-in ./jars/${path}/mappings/packaged.srg
 
 # Для деобфускации
 # java -jar SpecialSource.jar --in-jar {jar}.jar --out-jar .\deobf\{jar}.jar --srg-in .\conf\joined.srg

@@ -7,7 +7,7 @@ fi
 
 path=$1
 mkdir -p "decompiled/${path}"
-java -jar ./jars/CFR.jar "deobfuscated/${path}.jar" --outputdir "decompiled/${path}"
+java -jar ./jars/CFR.jar "./deobfuscated/${path}.jar" --outputdir "./decompiled/${path}"
 
 # Для декомпиляции
 # java -jar CFR.jar {jar}.jar --outputdir decompiled/
