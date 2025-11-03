@@ -1,5 +1,7 @@
 #!/bin/bash
 
+./pre-init.sh
+
 while true; do
     read -p "
     What u have?
