@@ -34,11 +34,15 @@ root/
 │   ├── client/
 │   │   └── client.jar
 │   │   └── mappings/
-│   │       └── joined.srg
+│   │       ├── packaged.srg
+│   │       ├── fields.csv
+│   │       └── methods.csv
 │   ├── server/
 │   │   ├── server.jar
 │   │   └── mappings/
-│   │       └── joined.srg
+│   │       ├── packaged.srg
+│   │       ├── fields.csv
+│   │       └── methods.csv
 │   ├── SpecialSource.jar
 │   └── CFR.jar
 ├── patches/
@@ -50,8 +54,9 @@ root/
 │   ├── client/... (Source there...)
 │   └── server/... (Source there...)
 ├── init.sh
+├── deobf.sh
 ├── decompile.sh
-└── deobf.sh
+└── postdeco.sh
 ```
 
 <H1 align="center">-==[ Socials ]==-</H1>

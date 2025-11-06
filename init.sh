@@ -21,6 +21,7 @@ done
 for jar in "${jars[@]}"; do
     ./deobf.sh "$jar"
     ./decompile.sh "$jar"
+    ./postdeco.sh "$jar"
 done
 
 # Пути

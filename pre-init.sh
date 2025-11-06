@@ -9,8 +9,8 @@ mkdir ./jars/server
 mkdir ./jars/client/mappings
 mkdir ./jars/server/mappings
 
-mkdir ./decompiled/client
-mkdir ./deobfuscated/server
-
 mkdir ./decompiled
 mkdir ./deobfuscated
+
+mkdir ./decompiled/client
+mkdir ./deobfuscated/server
