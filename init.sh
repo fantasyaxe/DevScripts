@@ -22,6 +22,7 @@ python RecreateMappings.py
 for jar in "${jars[@]}"; do
     ./deobf.sh "$jar"
     ./decompile.sh "$jar"
+    python ./PostDecompile.py "$jar"
 #    ./postdeco.sh "$jar"
 done
 

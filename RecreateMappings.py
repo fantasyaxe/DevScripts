@@ -1,6 +1,7 @@
+#!/usr/bin/env python3
 import csv
 
-final_file = "mappings/mapping.csv"
+final_file = "mappings/mappings.csv"
 
 def wroteFile(fileName, list):
     with open(fileName, 'w', newline='', encoding='utf-8') as f:
@@ -29,17 +30,21 @@ def process():
                         'deobfuscated': deobf
                     })
 
-    util_list = {}
+    id_replacements = {}
     for mapping in process_mappings:
-        util_list[mapping['obfuscated']] = mapping['deobfuscated']
+        if mapping['deobfuscated'].startswith('field_') or mapping['deobfuscated'].startswith('func_'):
+            id_replacements[mapping['obfuscated']] = mapping['deobfuscated']
 
-    for obf in util_list:
-        deobf = util_list[obf]
-        while deobf in util_list and deobf != util_list[deobf]:
-            deobf = util_list[deobf]
-        util_list[obf] = deobf
+    final_mappings = {}
+    for mapping in process_mappings:
+        obf = mapping['obfuscated']
+        deobf = mapping['deobfuscated']
+        if not (deobf.startswith('field_') or deobf.startswith('func_')):
+            final_obf = id_replacements.get(obf, obf)
+            final_mappings[final_obf] = deobf
 
-    process_mappings = [{'obfuscated': obf, 'deobfuscated': deobf} for obf, deobf in util_list.items()]
+    process_mappings = [{'obfuscated': obf, 'deobfuscated': deobf} for obf, deobf in final_mappings.items()]
+
     lolIDKwhatNameGiveForIt = {mapping['obfuscated'] for mapping in process_mappings}
     starred_mappings = [mapping for mapping in starred_mappings 
                        if mapping['deobfuscated'] not in lolIDKwhatNameGiveForIt]
