@@ -7,6 +7,8 @@
    		Скрипты для создания проекта разработки этой версии игры.
       <br> Для работы требуется самостоятельно загрузить некоторые файлы.
       <br> Т.к мне влом возиться с лицензиями, легализацией проекта и тому подобной хренью - Всё, что может быть нарушением каких либо Лицензий - Висит на вас. Я предоставляю лишь скрипты.
+      <br><br>
+      Пока работает только с клиентом.
     </b>
 </p>
 
@@ -26,33 +28,30 @@
     </b>
 </p>
 
-<H2 align="center">-==[ File Structure ]==-</H2>
+<H2 align="center">-==[ File Structure (For init) ]==-</H2>
 
 ```
 root/
 ├── jars/
 │   ├── client/
 │   │   └── client.jar
-│   │   └── mappings/
-│   │       ├── packaged.srg
-│   │       ├── fields.csv
-│   │       └── methods.csv
 │   ├── server/
 │   │   ├── server.jar
-│   │   └── mappings/
-│   │       ├── packaged.srg
-│   │       ├── fields.csv
-│   │       └── methods.csv
 │   ├── SpecialSource.jar
 │   └── CFR.jar
-├── patches/
+├── mappings/
+│   ├── packaged.srg
+│   ├── fields.csv
+│   ├── newids.csv
+│   └── methods.csv
+├── patches/ (Dont need on this time)
 │   ├── client/... (Patches there...)
 │   ├── server/... (Patches there...)
 │   ├── apply_patches.sh
 │   └── generate_patches.sh
-├── sources/
-│   ├── client/... (Source there...)
-│   └── server/... (Source there...)
+├── src/
+│   ├── client/... (Your source there...)
+│   └── server/... (Your source there...)
 ├── init.sh
 ├── deobf.sh
 ├── decompile.sh

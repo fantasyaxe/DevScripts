@@ -18,10 +18,11 @@ while true; do
     esac
 done
 
+python RecreateMappings.py
 for jar in "${jars[@]}"; do
     ./deobf.sh "$jar"
     ./decompile.sh "$jar"
-    ./postdeco.sh "$jar"
+#    ./postdeco.sh "$jar"
 done
 
 # Пути
