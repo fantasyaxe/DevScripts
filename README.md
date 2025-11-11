@@ -23,8 +23,8 @@
         и 
         <a href="https://github.com/Re-Minecraft/SpecialSource" targer="_blank">SpecialSource.jar</a>
       <br> 2 - Вытащить (Например из MCP751) маппинги 
-      <br> и закинуть их в mappings (Прям всё, что лежало в папке с маппингами)
-      <br> 3 - Запустить init.sh (.bat нет. Качайте git на винду)
+      <br> и закинуть их в mappings (Требуемые файлы можно посмотреть ниже)
+      <br> 3 - Запустить init.sh
     </b>
 </p>
 
