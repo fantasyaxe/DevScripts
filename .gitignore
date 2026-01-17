@@ -2,8 +2,13 @@
 # By: Lmao stupid Cion #
 # ==================== #
 
+# <= Main =>
+__pycache__
 
+# <= Dirs =>
 deobfuscated/
 decompiled/
 mappings/
 jars/
+src/
+patches/
