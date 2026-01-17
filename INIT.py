@@ -48,6 +48,5 @@ if __name__ == "__main__":
                  f"./jars/{edition}/{edition}.jar", "--out-jar", 
                  f"./deobfuscated/{edition}.jar", "--srg-in", "./mappings/packaged.srg"])
         sub.run(["java", "-jar", "./jars/CFR.jar", f"./deobfuscated/{edition}.jar", "--outputdir", f"./decompiled/{edition}"])
-    
-    sub.run(["python", "PostDecompile.py"])
+        sub.run(["python", "PostDecompile.py", edition])
     

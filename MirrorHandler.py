@@ -28,7 +28,7 @@ def ParseVersion():
         select = None
 
         while True:
-            id = int(input(f"\nSELECT (0-{len(versions)}): "))
+            id = int(input(f"\nSELECT (0-{len(versions)-1}): "))
             if id < 0 or id > len(versions):
                 print("Bruh..")
                 pass
