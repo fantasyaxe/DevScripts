@@ -20,6 +20,40 @@
     </b>
 </p>
 
+<H2 align="center">-==[ Mirrors? What? ]==-</H2>
+
+<p align="center" style="font-size: 15px">
+    <b>
+      <a href="https://github.com/MCRebooted/MirrorsList">MirrorsList</a>
+      - Короче есть этот репозиторий. В нем лежит зеркало этого проекта (Пример будет снизу).
+      <br> Нас интересует конкретно <code>decompiler</code> часть этого зеркала.
+      <br> Там должны быть указаны ссылки на клиент игры, сервер игры, SpecialSource и CFR. Всё.
+      <br> Зачем это нужно? Нууу... Не люблю хардкод ссылок.. А ещё это делает проект хоть сколько-то неубиваемым..
+    </b>
+</p>
+
+<H2 align="center">-==[ Mirror Example ]==-</H2>
+
+```json
+{
+  "version": {
+    "0.0.0-DEV": {
+      "decompiler": {
+        "client": "https://launcher.mojang.com/v1/objects/465378c9dc2f779ae1d6e8046ebc46fb53a57968/client.jar",
+        "server": "https://launcher.mojang.com/v1/objects/f9ae3f651319151ce99a0bfad6b34fa16eb6775f/server.jar",
+        "CFR": "https://www.benf.org/other/cfr/cfr-0.152.jar",
+        "SpecialSource": "https://github.com/MCRebooted/SpecialSource/releases/download/1.11.5/SpecialSource.jar"
+      },
+      "game": {
+        "client": {},
+        "server": {},
+        "both": {}
+      }
+    }
+  }
+}
+```
+
 <H2 align="center">-==[ File Structure ]==-</H2>
 
 ```
