@@ -52,10 +52,11 @@ root/
 ├── src/
 │   ├── client/... (Your source there...)
 │   └── server/... (Your source there...)
-├── init.sh
-├── deobf.sh
-├── decompile.sh
-└── postdeco.sh
+├── RecreateMappings.py
+├── PostDecompile.py
+├── MirrorHandler.py
+├── config.py
+└── INIT.py
 ```
 
 <H1 align="center">-==[ Socials ]==-</H1>
