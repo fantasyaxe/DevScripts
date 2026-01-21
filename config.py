@@ -1,2 +1,9 @@
 # Edit this line if u need another mirror
+# Supported formats: http://, https://, file://
+
+# Ex:
+# MIRROR_URL = "https://raw.githubusercontent.com/MCRebooted/MirrorsList/refs/heads/main/mirrors.json"
+# MIRROR_URL = "file:///C:/DevScripts/mirrors.json"
+
+
 MIRROR_URL = "https://raw.githubusercontent.com/MCRebooted/MirrorsList/refs/heads/main/mirrors.json"
