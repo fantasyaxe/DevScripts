@@ -24,7 +24,7 @@
 
 <p align="center" style="font-size: 15px">
     <b>
-      <a href="https://github.com/MCRebooted/MirrorsList">MirrorsList</a>
+      <a href="https://github.com/fantasyaxe/MirrorsList">MirrorsList</a>
       - Короче есть этот репозиторий. В нем лежит зеркало этого проекта (Пример будет снизу).
       <br> Нас интересует конкретно <code>decompiler</code> часть этого зеркала.
       <br> Там должны быть указаны ссылки на клиент игры, сервер игры, SpecialSource и CFR. Всё.
@@ -42,7 +42,7 @@
         "client": "https://launcher.mojang.com/v1/objects/465378c9dc2f779ae1d6e8046ebc46fb53a57968/client.jar",
         "server": "https://launcher.mojang.com/v1/objects/f9ae3f651319151ce99a0bfad6b34fa16eb6775f/server.jar",
         "CFR": "https://www.benf.org/other/cfr/cfr-0.152.jar",
-        "SpecialSource": "https://github.com/MCRebooted/SpecialSource/releases/download/1.11.5/SpecialSource.jar"
+        "SpecialSource": "https://github.com/fantasyaxe/SpecialSource/releases/download/1.11.5/SpecialSource.jar"
       },
       "game": {
         "client": {},
