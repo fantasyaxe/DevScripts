@@ -1,0 +1,18 @@
+# ==================== #
+# By: Lmao stupid Cion #
+# ==================== #
+
+# <= Main =>
+__pycache__
+
+# <= Tekila =>
+tekila.py
+tekila.txt
+tekila.progress.txt
+
+# <= Dirs =>
+deobfuscated/
+decompiled/
+jars/
+src/
+patches/
