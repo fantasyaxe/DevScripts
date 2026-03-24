@@ -7,4 +7,5 @@
 # MIRROR_URL = "file:///home/DevScripts/mirrors.json"
 
 
-MIRROR_URL = "https://raw.githubusercontent.com/fantasyaxe/MirrorsList/refs/heads/main/mirrors.json"
+#MIRROR_URL = "https://raw.githubusercontent.com/fantasyaxe/MirrorsList/refs/heads/main/mirrors.json"
+MIRROR_URL = "file:///E:/fantasyaxe/DevScripts/mirror.json"

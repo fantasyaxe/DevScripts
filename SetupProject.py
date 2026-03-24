@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import os, shutil
+import os, shutil, sys
 import MirrorHandler as mirror
 
 def CreateStructure(projectDir: str):
@@ -31,3 +31,5 @@ def init(srcDir: dir, projectDir: dir, projectVersion: str):
     DownloadGradle(projectDir=projectDir, projectVersion=projectVersion)
     MoveSources(srcDir, projectDir)
     
+if __name__ == "__main__":
+    init(sys.argv[1], sys.argv[2], sys.argv[3])

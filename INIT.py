@@ -5,11 +5,12 @@ import MirrorHandler as mirror
 global editions
 editions = []
 data = None
+version = None
 
 def DownloadSources():
-    global data
-    data = mirror.ParseVersion()
-    mirror.DecompilerJars(data)
+    global data, version
+    data, version = mirror.load_version()
+    mirror.DecompilerJars(data)   
 
 def SelectEdition():
     while True:
@@ -40,11 +41,11 @@ def CreateStructure():
     os.makedirs("./decompiled",     exist_ok=True)
 
 def runBuildSources():
-    global data
+    global version
     SelectEdition()
     CreateStructure()
     DownloadSources()
-    
+
     sub.run(["python", "RecreateMappings.py"])
     for edition in editions:
         sub.run(["java", "-jar", "./jars/SpecialSource.jar", "--in-jar", 
@@ -52,7 +53,7 @@ def runBuildSources():
                  f"./deobfuscated/{edition}.jar", "--srg-in", "./mappings/packaged.srg"])
         sub.run(["java", "-jar", "./jars/CFR.jar", f"./deobfuscated/{edition}.jar", "--outputdir", f"./decompiled/{edition}"])
         sub.run(["python", "PostDecompile.py", edition])
-        sub.run(["python", "SetupProject.py", f"./decompiled/{edition}/net/", "./FantasyMC", data])
+        sub.run(["python", "SetupProject.py", f"./decompiled/{edition}/net/", "./FantasyMC", version])
 
 if __name__ == "__main__":
     runBuildSources()
