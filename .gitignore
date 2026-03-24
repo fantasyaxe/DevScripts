@@ -4,6 +4,7 @@
 
 # <= Main =>
 __pycache__
+FantasyMC/
 
 # <= Tekila =>
 tekila.py

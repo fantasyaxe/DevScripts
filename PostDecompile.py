@@ -14,11 +14,10 @@ def replaceInFile(file, replace):
     with lock: print(f"Processing {file}..")
     with open(file, 'r', encoding='utf-8') as f:
         data = f.read()
-    
+
     data = remove_cfr_comments(data)
-    with open(file, 'r', encoding='utf-8') as f:
-        data = f.read()
     o_data = data
+
     for obfuscated, deobfuscated in replace:
         if obfuscated in data:
             with lock: 
