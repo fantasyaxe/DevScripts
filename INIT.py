@@ -30,12 +30,8 @@ def SelectEdition():
         break
 
 def CreateStructure():
-    os.makedirs("./patches/client", exist_ok=True)
-    os.makedirs("./patches/server", exist_ok=True)
     os.makedirs("./jars/client",    exist_ok=True)
     os.makedirs("./jars/server",    exist_ok=True)
-    os.makedirs("./src/client",     exist_ok=True)
-    os.makedirs("./src/server",     exist_ok=True)
     os.makedirs("./mappings",       exist_ok=True)
     os.makedirs("./deobfuscated",   exist_ok=True)
     os.makedirs("./decompiled",     exist_ok=True)
@@ -53,7 +49,7 @@ def runBuildSources():
                  f"./deobfuscated/{edition}.jar", "--srg-in", "./mappings/packaged.srg"])
         sub.run(["java", "-jar", "./jars/CFR.jar", f"./deobfuscated/{edition}.jar", "--outputdir", f"./decompiled/{edition}"])
         sub.run(["python", "PostDecompile.py", edition])
-        sub.run(["python", "SetupProject.py", f"./decompiled/{edition}/net/", "./FantasyMC", version])
+        sub.run(["python", "SetupProject.py", f"./decompiled/{edition}/", "./FantasyMC", version])
 
 if __name__ == "__main__":
     runBuildSources()

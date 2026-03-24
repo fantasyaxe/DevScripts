@@ -23,7 +23,7 @@ def MoveSources(srcDir: str, projectDir: str):
         shutil.move(s, d)
 
 def DownloadGradle(projectDir: dir, projectVersion: str):
-    data = mirror.ParseInitedVersion(projectVersion=projectVersion)
+    data, _ = mirror.load_version(projectVersion)
     mirror.DownloadGradle(projectDir, data)
 
 def init(srcDir: dir, projectDir: dir, projectVersion: str):

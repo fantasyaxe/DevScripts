@@ -14,14 +14,13 @@ def DecompilerJars(versionData: json):
     Download(versionData["decompiler"]["client"],        "./jars/client/client.jar")
     Download(versionData["decompiler"]["server"],        "./jars/server/server.jar")
 
-def DownloadGradle(projectDir: dir, version: str):
-    versionData = load_version(version)
+def DownloadGradle(projectDir: str, versionData: dict):
     base = os.path.abspath(projectDir)
     Download(versionData["build"][".gitignore"],           os.path.join(base, ".gitignore"))
-    Download(versionData["build"]["build.gradle.kts"],           os.path.join(base, "build.gradle.kts"))
-    Download(versionData["build"]["gradle.properties"],          os.path.join(base, "gradle.properties"))
-    Download(versionData["build"]["settings.gradle.kts"],        os.path.join(base, "settings.gradle.kts"))
-    Download(versionData["build"]["gradle-wrapper.properties"],  os.path.join(base, "gradle", "wrapper", "gradle-wrapper.properties"))
+    Download(versionData["build"]["build.gradle.kts"],     os.path.join(base, "build.gradle.kts"))
+    Download(versionData["build"]["gradle.properties"],    os.path.join(base, "gradle.properties"))
+    Download(versionData["build"]["settings.gradle.kts"],  os.path.join(base, "settings.gradle.kts"))
+    Download(versionData["build"]["gradle-wrapper.properties"], os.path.join(base, "gradle", "wrapper", "gradle-wrapper.properties"))
 
 def load_version(version: str =""):
     data = load_mirror()
